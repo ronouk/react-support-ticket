@@ -8,28 +8,26 @@ const Footer = () => {
                 <nav>
                     <h6 className="footer-title">Support Ticket</h6>
                     <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illum consectetur nobis, dicta sequi accusamus veritatis perferendis molestias ab libero!</p>
+                        <p>We provide a smart and reliable support ticket system that connects customers with the right solutions quickly. Our goal is to make support simple, transparent, and efficient for everyone.</p>
                     </div>
                 </nav>
                 <nav>
                     <h6 className="footer-title">Company</h6>
-                    <a className="link link-hover">Branding</a>
-                    <a className="link link-hover">Design</a>
-                    <a className="link link-hover">Marketing</a>
-                    <a className="link link-hover">Advertisement</a>
+                    <a className="link link-hover">About Us</a>
+                    <a className="link link-hover">Our Mission</a>
+                    <a className="link link-hover">Contact Sales</a>
                 </nav>
                 <nav>
                     <h6 className="footer-title">Services</h6>
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Press kit</a>
+                    <a className="link link-hover">Product & Services</a>
+                    <a className="link link-hover">Customer Stories</a>
+                    <a className="link link-hover">Download Apps</a>
                 </nav>
                 <nav>
                     <h6 className="footer-title">Information</h6>
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                    <a className="link link-hover">Privacy Policy</a>
+                    <a className="link link-hover">Terms & Conditions</a>
+                    <a className="link link-hover">Join Us</a>
                 </nav>
                 <nav>
                     <h6 className="footer-title">Social Links</h6>

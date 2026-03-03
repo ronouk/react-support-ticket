@@ -4,9 +4,14 @@ import TicketStatus from './ticket-status/TicketStatus';
 
 const TicketArea = () => {
     return (
-        <div className='md:flex justify-between'>
-            <CustomerTicket></CustomerTicket>
-            <TicketStatus></TicketStatus>
+        <div className="grid lg:grid-cols-3 gap-12">
+            <div className="lg:col-span-2">
+                <CustomerTicket />
+            </div>
+
+            <div className="col-span-1">
+                <TicketStatus />
+            </div>
         </div>
     );
 };

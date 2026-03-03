@@ -27,7 +27,7 @@ const CustomerTicket = () => {
                     <div className='bottom-section flex justify-between'>
                         <div className='bottom-left flex gap-4'>
                             <p>#1001</p>
-                            <p>Priority</p>
+                            <p className='uppercase'>Priority</p>
                         </div>
                         <div className='bottom-right flex gap-4'>
                             <p>Customer name</p>
