@@ -3,7 +3,7 @@ import './navbar.css'
 
 const Navbar = () => {
     return (
-        <div className='shadow-sm'>
+        <div className='shadow-sm bg-white'>
             <div className="navbar max-w-11/12 lg:max-w-5/6 mx-auto">
                 <div className="flex-1">
                     <a className="text-lg lg:text-xl font-bold cursor-pointer">Support Ticket</a>

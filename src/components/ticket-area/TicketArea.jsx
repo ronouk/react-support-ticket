@@ -4,7 +4,7 @@ import TicketStatus from './ticket-status/TicketStatus';
 
 const TicketArea = () => {
     return (
-        <div className='flex justify-between'>
+        <div className='md:flex justify-between'>
             <CustomerTicket></CustomerTicket>
             <TicketStatus></TicketStatus>
         </div>
