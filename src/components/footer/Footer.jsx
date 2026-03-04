@@ -50,7 +50,7 @@ const Footer = () => {
                 </nav>
             </footer>
             <div className='text-center pt-5'>
-                <p>© 2025 CS — Ticket System. All rights reserved.</p>
+                <p>© 2026 CS — Ticket System. All rights reserved.</p>
             </div>
         </div>
     );
