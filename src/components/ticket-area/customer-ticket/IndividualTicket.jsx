@@ -1,16 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
-const IndividualTicket = ({ individualTicketData }) => {
-    console.log(individualTicketData)
+const IndividualTicket = ({ individualTicketData, inProgressCounter, setInProgressCounter }) => {
+    // console.log(individualTicketData)
     const { id, title, status, priority, description, customer, createdAt } = individualTicketData;
+    const [isAdded, setIsAdded] = useState(false);
+
+    const handleInProgressCounter = (individualTicketData) => {
+        if (isAdded) {
+
+            toast("Ticket already in processe")
+
+            return
+        };
+
+        const newInProgressCounterData = [...inProgressCounter, individualTicketData];
+        setInProgressCounter(newInProgressCounterData);
+        console.log(newInProgressCounterData)
+        setIsAdded(true)
+    }
+
     return (
-        <div className='individual-ticket bg-white px-5 py-8 rounded-md shadow-xl'>
+        <div onClick={() => handleInProgressCounter(individualTicketData)} id='individual-ticket' className='bg-white px-5 py-8 rounded-md shadow-xl flex flex-col justify-between hover:bg-amber-50 cursor-pointer transition'>
 
             {/* ticket top section */}
             <div className='top-section flex flex-col gap-2 lg:flex-row lg:justify-between lg:items-center'>
                 <h1 className='font-semibold text-md w-full lg:w-2/3'>{title}</h1>
 
-                <div className={`text-sm flex items-center gap-2 px-3 py-2 rounded-3xl ${status == "Open" ? "bg-[#B9F8CF]" : "bg-[#F8F3B9]"} w-full lg:w-1/3`}>
+                <div className={`text-sm flex items-center gap-2 px-3 py-2 rounded-3xl ${status == "Open" ? "bg-[#B9F8CF]" : "bg-[#F8F3B9]"} w-full lg:w-1/3 justify-center`}>
                     <div>
                         <i class={`fa-solid fa-circle text-sm ${status == "Open" ? "text-[#02A53B]" : "text-[#FEBB0C]"}`}></i>
                     </div>

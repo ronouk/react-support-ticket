@@ -9,7 +9,7 @@ const TicketStatus = () => {
                 <div className='task-status-card'>
                     <div className='bg-white px-5 py-8 space-y-5 rounded-lg shadow-xl'>
                         <h1 className='text-lg font-semibold'>Task title</h1>
-                        <button className='btn bg-green-600 text-white'>Complete</button>
+                        <button className='btn bg-green-600 text-white hover:bg-gray-700'>Complete</button>
                     </div>
                 </div>
             </div>

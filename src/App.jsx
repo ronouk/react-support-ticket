@@ -1,13 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import Navbar from './components/navbar/Navbar';
 import StatusCard from './components/status-card/StatusCard';
 import TicketArea from './components/ticket-area/TicketArea';
-import Footer from './components/footer/Footer'; // assuming you have this
+import Footer from './components/footer/Footer';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const [supportTicketData, setSupportTicketData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  // counter
+  const [inProgressCounter, setInProgressCounter] = useState([]);
+  // const [selectedTicket, setSelectedTicket] = useState([]);
 
   useEffect(() => {
     fetch("/support_ticket.json")
@@ -25,7 +30,7 @@ function App() {
         setError(err.message);
         setLoading(false);
       });
-  }, []); // Empty dependency array ensures this runs only once after mount
+  }, []); // Empty dependency array ensures it renders only once, after fetching done
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -34,11 +39,19 @@ function App() {
     <div className='bg-gray-100'>
       <Navbar />
       <div className="max-w-11/12 lg:max-w-5/6 mx-auto py-8">
-        <StatusCard />
-        {/* Now passing the actual data, not a promise */}
-        <TicketArea supportTicketData={supportTicketData} />
+        <StatusCard inProgressCounter={inProgressCounter} />
+
+        <Suspense fallback="Data loading...">
+          <TicketArea
+            supportTicketData={supportTicketData}
+            inProgressCounter = {inProgressCounter}
+            setInProgressCounter={setInProgressCounter}
+          />
+        </Suspense>
       </div>
       <Footer />
+
+      <ToastContainer />
     </div>
   );
 }
