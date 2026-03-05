@@ -1,6 +1,6 @@
 1. **What is JSX, and why is it used?**
 
- JSX *stands for* JavaScript XML. It's a syntax extension that lets user write HTML- like markup inside a JavaScript file.
+ JSX stands for JavaScript XML. It's a syntax extension that lets user write HTML- like markup inside a JavaScript file.
 
 It is used to:
 
