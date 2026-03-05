@@ -1,16 +1,34 @@
-# React + Vite
+1. **What is JSX, and why is it used?**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ JSX *stands for* JavaScript XML. It's a syntax extension that lets user write HTML- like markup inside a JavaScript file.
 
-Currently, two official plugins are available:
+It is used to:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Make component structure more readable and intuitive.
+* Allows embedding JavaScript expressions inside curly braces `{}`
 
-## React Compiler
+2. **What is the difference between State and Props?**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+State manage data within a component
+Props is used to pass data from parent to child
 
-## Expanding the ESLint configuration
+3. **What is the useState hook, and how does it work?**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+useState is a **React hook** that adds state to functional components.
+
+It accepts one argument: the  initial state (can be array or number or string or boolean)  and returns an array with  **two elements.** The two elements are:
+
+* The current state value.
+* A function to update that value.
+* Example: const [newState, setNewState] = useState([]);
+
+4. **How can you share state between components in React?**
+
+   There are several ways to share state between components.
+
+   1. Passing as props
+   2. Lifting the state up
+   3. Using context. It is advanced and most convenient way.
+5. How is event handling done in React?
+
+   The event handling is done by use function which generally starts with handleFunctionName. It does not need to be named like this but it is common practice. Then the data is processed within and passed via props to the component where it gets processed/executed.

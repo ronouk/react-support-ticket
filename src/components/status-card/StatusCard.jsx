@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StatusCard = ({inProgressCounter}) => {
+const StatusCard = ({inProgressCounter, completedTask}) => {
     
     return (
         <div className='in-process grid grid-cols-1 md:grid-cols-2 gap-10 grow justify-between mx-auto md:my-15'>
@@ -14,7 +14,7 @@ const StatusCard = ({inProgressCounter}) => {
                 <div className='absolute scale-120 bg-[url("/vector1.png")] inset-0 bg-no-repeat'></div>
                 <div className='absolute scale-120 bg-[url("/vector1.png")] scale-x-[-1] inset-0 bg-no-repeat'></div>
                 <h1 className='text-xl'>Resolved</h1>
-                <h1 className='font-bold text-2xl'>0</h1>
+                <h1 className='font-bold text-2xl'>{completedTask.length}</h1>
             </div>
         </div>
     );

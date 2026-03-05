@@ -9,7 +9,7 @@ const IndividualTicket = ({ individualTicketData, inProgressCounter, setInProgre
     const handleInProgressCounter = (individualTicketData) => {
         if (isAdded) {
 
-            toast("Ticket already in processe")
+            toast("Ticket already in process")
 
             return
         };
