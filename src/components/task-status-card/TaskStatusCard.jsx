@@ -1,5 +1,4 @@
 import React from 'react';
-import { toast } from 'react-toastify';
 
 const TaskStatusCard = ({ supportTicketData, setSupportTicketData, singleTicketData, completedTask, setCompletedTask, addToCompleted }) => {
     const handleCompleted = (singleTicketData) => {

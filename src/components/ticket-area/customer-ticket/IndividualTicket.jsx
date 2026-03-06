@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
-const IndividualTicket = ({ individualTicketData, inProgressCounter, setInProgressCounter }) => {
+const IndividualTicket = ({ individualTicketData, inProgressCounter, setInProgressCounter, supportTicketData, setSupportTicketData }) => {
     // console.log(individualTicketData)
     const { id, title, status, priority, description, customer, createdAt } = individualTicketData;
     const [isAdded, setIsAdded] = useState(false);
@@ -16,15 +16,22 @@ const IndividualTicket = ({ individualTicketData, inProgressCounter, setInProgre
 
         const newInProgressCounterData = [...inProgressCounter, individualTicketData];
         setInProgressCounter(newInProgressCounterData);
-        console.log(newInProgressCounterData)
+        // console.log(newInProgressCounterData)
         toast("Ticket added to processing")
         setIsAdded(true)
+
+    }
+
+    const handleStatusChange = (individualTicketData) => {
+        const newSupportTicketData = supportTicketData.map(ticket => ticket.id === individualTicketData.id ? { ...ticket, status: "In-Process" } : ticket)
+
+        setSupportTicketData(newSupportTicketData);
     }
 
 
 
     return (
-        <div onClick={() => { handleInProgressCounter(individualTicketData) }} id='individual-ticket' className='bg-white px-5 py-8 rounded-md shadow-xl flex flex-col justify-between hover:bg-amber-50 cursor-pointer transition'>
+        <div onClick={() => { handleInProgressCounter(individualTicketData), handleStatusChange(individualTicketData) }} id='individual-ticket' className='bg-white px-5 py-8 rounded-md shadow-xl flex flex-col justify-between hover:bg-amber-50 cursor-pointer transition'>
 
             {/* ticket top section */}
             <div className='top-section flex flex-col gap-2 lg:flex-row lg:justify-between lg:items-center'>

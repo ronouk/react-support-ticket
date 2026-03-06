@@ -14,7 +14,7 @@
     "description": "I noticed an unexpected service charge on my savings account. Please clarify why this fee was applied.",
     "customer": "Emily Johnson",
     "priority": "Medium",
-    "status": "In Progress",
+    "status": "Open",
     "createdAt": "2026-03-01"
   },
   {
@@ -23,7 +23,7 @@
     "description": "I made a credit card payment two days ago. The amount has been debited but is not reflected in my card balance.",
     "customer": "Michael Brown",
     "priority": "Low",
-    "status": "In Progress",
+    "status": "Open",
     "createdAt": "2026-03-01"
   },
   {
@@ -32,7 +32,7 @@
     "description": "Attempted to withdraw cash from an ATM. The machine did not dispense cash but the amount was deducted.",
     "customer": "Sophia Martinez",
     "priority": "High",
-    "status": "In Progress",
+    "status": "Open",
     "createdAt": "2026-03-01"
   },
   {
@@ -68,7 +68,7 @@
     "description": "Requested a new cheque book last week. It has not been delivered yet.",
     "customer": "Ava Harris",
     "priority": "Medium",
-    "status": "In Progress",
+    "status": "Open",
     "createdAt": "2026-03-01"
   },
   {
@@ -95,7 +95,7 @@
     "description": "My debit card was declined during a purchase. There are sufficient funds in my account.",
     "customer": "Benjamin Walker",
     "priority": "High",
-    "status": "In Progress",
+    "status": "Open",
     "createdAt": "2026-03-02"
   },
   {
@@ -104,7 +104,7 @@
     "description": "Unable to download last month's account statement. The system shows a server error.",
     "customer": "Mia Hall",
     "priority": "Medium",
-    "status": "In Progress",
+    "status": "Open",
     "createdAt": "2026-03-02"
   },
   {
@@ -113,7 +113,7 @@
     "description": "Requesting to change the EMI debit date for my personal loan. Kindly guide me through the process.",
     "customer": "Lucas Allen",
     "priority": "Medium",
-    "status": "In Progress",
+    "status": "Open",
     "createdAt": "2026-03-02"
   },
   {
@@ -131,7 +131,7 @@
     "description": "A payment I made appears twice in my transaction history. Kindly verify and correct if necessary.",
     "customer": "Henry King",
     "priority": "High",
-    "status": "In Progress",
+    "status": "Open",
     "createdAt": "2026-03-02"
   },
   {
@@ -176,7 +176,7 @@
     "description": "Merchant processed a refund last week. The amount has not been credited to my account yet.",
     "customer": "Lily Adams",
     "priority": "High",
-    "status": "In Progress",
+    "status": "Open",
     "createdAt": "2026-03-02"
   }
 ]

@@ -7,7 +7,7 @@ const TicketStatus = ({ supportTicketData, setSupportTicketData, inProgressCount
     const [completedArray, setCompletedArray] = useState([])
 
     const addToCompleted = (singleTicketData) => {
-        console.log(singleTicketData)
+        // console.log(singleTicketData)
 
         const newCompletedArray = [...completedArray, singleTicketData]
         setCompletedArray(newCompletedArray);

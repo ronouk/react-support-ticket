@@ -10,6 +10,8 @@ const TicketArea = ({ supportTicketData, setSupportTicketData, inProgressCounter
                     supportTicketData={supportTicketData}
                     inProgressCounter={inProgressCounter}
                     setInProgressCounter={setInProgressCounter}
+
+                    setSupportTicketData = {setSupportTicketData}
                 />
             </div>
 
