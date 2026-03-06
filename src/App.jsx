@@ -33,7 +33,7 @@ function App() {
         setError(err.message);
         setLoading(false);
       });
-  }, []); // Empty dependency array ensures it renders only once, after fetching done
+  }, []);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
