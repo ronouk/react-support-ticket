@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TaskStatusCard from '../../task-status-card/TaskStatusCard';
 import { toast } from 'react-toastify';
 
-const TicketStatus = ({ inProgressCounter, setInProgressCounter, completedTask, setCompletedTask }) => {
+const TicketStatus = ({ supportTicketData, setSupportTicketData, inProgressCounter, setInProgressCounter, completedTask, setCompletedTask }) => {
 
     const [completedArray, setCompletedArray] = useState([])
 
@@ -14,12 +14,14 @@ const TicketStatus = ({ inProgressCounter, setInProgressCounter, completedTask, 
 
         // console.log(newCompletedArray)
 
-        toast(<span className='font-bold text-green-600'>Task Completed</span>)
+        toast(<span className='font-bold text-green-600'>Ticket resolved and removed</span>)
 
         const newInProgressCounter = inProgressCounter.filter(singleData => (singleData.id !== singleTicketData.id));
         setInProgressCounter(newInProgressCounter);
 
         console.log(newInProgressCounter);
+
+
     }
 
 
@@ -29,7 +31,7 @@ const TicketStatus = ({ inProgressCounter, setInProgressCounter, completedTask, 
             <div className='task-status mb-8'>
                 <h1 className='text-2xl font-bold text-[#34485A] mb-8'>Task status</h1>
                 {inProgressCounter.length === 0 ? (
-                    <h1>No ticket processed</h1>
+                    <h1>No ticket in progress</h1>
                 ) : (
                     inProgressCounter.map((singleTicketData) => (
                         <TaskStatusCard
@@ -38,6 +40,9 @@ const TicketStatus = ({ inProgressCounter, setInProgressCounter, completedTask, 
                             completedTask={completedTask}
                             setCompletedTask={setCompletedTask}
                             addToCompleted={addToCompleted}
+
+                            supportTicketData = {supportTicketData}
+                            setSupportTicketData = {setSupportTicketData}
 
                         />
                     ))

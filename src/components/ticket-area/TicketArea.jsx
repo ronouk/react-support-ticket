@@ -2,7 +2,7 @@ import React from 'react';
 import CustomerTicket from './customer-ticket/CustomerTicket';
 import TicketStatus from './ticket-status/TicketStatus';
 
-const TicketArea = ({ supportTicketData, inProgressCounter, setInProgressCounter, completedTask, setCompletedTask }) => {
+const TicketArea = ({ supportTicketData, setSupportTicketData, inProgressCounter, setInProgressCounter, completedTask, setCompletedTask }) => {
     return (
         <div className="grid lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2">
@@ -19,6 +19,8 @@ const TicketArea = ({ supportTicketData, inProgressCounter, setInProgressCounter
                     setInProgressCounter = {setInProgressCounter}
                     completedTask={completedTask}
                     setCompletedTask={setCompletedTask}
+                    supportTicketData = {supportTicketData}
+                    setSupportTicketData = {setSupportTicketData}
                 />
             </div>
         </div>

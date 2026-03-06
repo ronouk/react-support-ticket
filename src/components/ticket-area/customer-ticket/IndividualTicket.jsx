@@ -9,7 +9,7 @@ const IndividualTicket = ({ individualTicketData, inProgressCounter, setInProgre
     const handleInProgressCounter = (individualTicketData) => {
         if (isAdded) {
 
-            toast("Ticket already in process")
+            toast(<span className='text-red-600 font-bold'>Ticket already processed</span>)
 
             return
         };
@@ -17,11 +17,14 @@ const IndividualTicket = ({ individualTicketData, inProgressCounter, setInProgre
         const newInProgressCounterData = [...inProgressCounter, individualTicketData];
         setInProgressCounter(newInProgressCounterData);
         console.log(newInProgressCounterData)
+        toast("Ticket added to processing")
         setIsAdded(true)
     }
 
+
+
     return (
-        <div onClick={() => handleInProgressCounter(individualTicketData)} id='individual-ticket' className='bg-white px-5 py-8 rounded-md shadow-xl flex flex-col justify-between hover:bg-amber-50 cursor-pointer transition'>
+        <div onClick={() => { handleInProgressCounter(individualTicketData) }} id='individual-ticket' className='bg-white px-5 py-8 rounded-md shadow-xl flex flex-col justify-between hover:bg-amber-50 cursor-pointer transition'>
 
             {/* ticket top section */}
             <div className='top-section flex flex-col gap-2 lg:flex-row lg:justify-between lg:items-center'>

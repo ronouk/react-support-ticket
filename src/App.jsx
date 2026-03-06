@@ -3,22 +3,18 @@ import Navbar from './components/navbar/Navbar';
 import StatusCard from './components/status-card/StatusCard';
 import TicketArea from './components/ticket-area/TicketArea';
 import Footer from './components/footer/Footer';
-import { toast, ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
-  const [supportTicketData, setSupportTicketData] = useState(null);
+  const [supportTicketData, setSupportTicketData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-  // counter
   const [inProgressCounter, setInProgressCounter] = useState([]);
-
   const [completedTask, setCompletedTask] = useState([]);
 
   const handleCompleteTask = (singleTicketData) => {
     const completedRemovedFromAll = supportTicketData.filter(singleData => singleData.id !== singleTicketData.id)
     setSupportTicketData(completedRemovedFromAll);
-    toast(<span className='text-red-600 font-bold'>Ticket Removed</span>);
   }
 
   useEffect(() => {
@@ -55,11 +51,13 @@ function App() {
         <Suspense fallback="Data loading...">
           <TicketArea
             supportTicketData={supportTicketData}
+            setSupportTicketData = {setSupportTicketData}
             inProgressCounter={inProgressCounter}
             setInProgressCounter={setInProgressCounter}
             completedTask={completedTask}
             setCompletedTask={setCompletedTask}
             handleCompleteTask={handleCompleteTask}
+            // handleSelectedTicket={handleSelectedTicket}
           />
         </Suspense>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import IndividualTicket from './IndividualTicket';
 
-const CustomerTicket = ({ supportTicketData, inProgressCounter, setInProgressCounter }) => {
+const CustomerTicket = ({ supportTicketData, inProgressCounter, setInProgressCounter}) => {
 
     return (
         <div>
